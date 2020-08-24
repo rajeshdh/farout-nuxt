@@ -36,7 +36,7 @@ env: {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Archivo+Black' }
     ]
   },
-  css: ["@/assets/grid.css","bf-solid/dist/solid.latest.css"],
+      //  css: ["@/assets/grid.css","bf-solid/dist/solid.latest.css"],
   // icon: {
   //   iconSrc: `${siteInfo.siteicon}`
   //  },
@@ -44,7 +44,7 @@ env: {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
-  modules: ['@nuxtjs/markdownit', '@nuxtjs/pwa','@nuxtjs/axios'],
+  modules: ['@nuxtjs/markdownit', '@nuxtjs/pwa','@nuxtjs/axios', '@nuxtjs/tailwindcss'],
   markdownit: {
     injected: true,
     preset: 'default',

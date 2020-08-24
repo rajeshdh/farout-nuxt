@@ -1,8 +1,8 @@
 <template>
-<div class="xs-text-6 md-text-5">
-    <div v-if="items2[0]" class="r full-height browse" :style="`height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`">
+<div class="flex mb-4 table-fixed xs-text-6 md-text-5 border">
+    <div v-if="items2[0]" class="flex flex-wrap -mb-3" :style="`height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`">
 
-      <div v-if="items2[pi]" v-for="(p,pi) in items2" :key="p.pi" class="xs-border xs-p2 bcg-item">
+      <div v-if="items2[pi]" v-for="(p,pi) in items2" :key="p.pi" class=" col-span-12 p-10 text-blue-600">
         <div class="item xs-block xs-full-height xs-flex">
           <nuxt-link class="xs-text-center xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center" :to="p._path">
             {{p.title}}

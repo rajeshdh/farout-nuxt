@@ -1,20 +1,20 @@
 <template>
-  <nav ref="navBar" id="navbar" class="sm-border-bottom">
-    <div class="r">
+  <nav ref="navBar" id="navbar" class="sm-border-b-0">
+    <div class="grid grid-cols-3 gap-16 border px-4 py-2">
 
-      <div class="c-4 xs-text-left xs-p2 sm-border-right">
+      <div class="c-4 xs-text-left xs-p2 sm-border-r">
         <div class="item">
           <nuxt-link class="sitename" to="/" exact>{{headerSiteName}}</nuxt-link>
-        </div>
-      </div>
+        </div>  
+      </div>  
 
-      <div class="c-4 xs-border-top xs-border-bottom sm-border-top-none sm-border-bottom-none sm-border-left sm-border-right xs-p2">
+      <div class="c-4 xs-border-t xs-border-b sm-border-t-none sm-border-b-none sm-border-l sm-border-r xs-p2">
         <div class="item xs-flex">
           <VueFuse placeholder="Search" :compResults="compResults" :keys="keys" :list="allPosts" event-name="searchChanged" />
         </div>
 
       </div>
-      <div v-if="blogtitle" style="z-index:55;" class="c-12 xs-border-top xs-border-bottom xs-p2 xs-text-6 titlebar">
+      <div v-if="blogtitle" style="z-index:55;" class="c-12 xs-border-t xs-border-b xs-p2 xs-text-6 titlebar">
         <div class="item">
           <nuxt-link to="/" exact>Home</nuxt-link>
           <span v-show="crumb"> &nbsp;
@@ -26,6 +26,7 @@
   </nav>
 </template>
 <script>
+
 import VueFuse from "~/components/VueFuse";
 export default {
   props: ["blogtitle", "posts", "thecrumb"],

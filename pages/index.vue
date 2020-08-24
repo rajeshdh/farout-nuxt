@@ -1,5 +1,4 @@
 <template>
-
     <component :is="getLayout" :allitems="allBlogPosts"></component>
 </template>
 

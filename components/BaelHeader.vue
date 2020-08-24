@@ -1,6 +1,6 @@
 <template>
   <nav ref="navBar" id="navbar" class="sm-border-b-0">
-    <div class="grid grid-cols-3 gap-16 border px-4 py-2">
+    <div class="flex justify-between flex-wrap bg-purple-500 p-6">
 
       <div class="c-4 xs-text-left xs-p2 sm-border-r">
         <div class="item">
@@ -10,7 +10,7 @@
 
       <div class="c-4 xs-border-t xs-border-b sm-border-t-none sm-border-b-none sm-border-l sm-border-r xs-p2">
         <div class="item xs-flex">
-          <VueFuse placeholder="Search" :compResults="compResults" :keys="keys" :list="allPosts" event-name="searchChanged" />
+          <VueFuse  placeholder="Search" :compResults="compResults" :keys="keys" :list="allPosts" event-name="searchChanged" />
         </div>
 
       </div>

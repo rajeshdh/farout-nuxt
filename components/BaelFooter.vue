@@ -5,7 +5,7 @@
         <div class="c-12 xs-text-left xs-p2 xs-border">
             <div class="item xs-text-center">
                 <div v-if="pagination" class="xs-flex xs-flex-justify-center xs-flex-align-center">
-                    <span class="xs-absolute xs-l1 xs-text-6 text-gray-lighter xs-mr2 "> <span class="bold">&nbsp; {{ 1 + this.$store.state.gridOffset}} - {{this.pageCount}}</span> of {{this.$store.state.resultsnum}} </span>
+                    <span class="xs-absolute xs-l1 xs-text-6 text-gray-lighter xs-mr2"> <span class="bold">&nbsp; {{ 1 + this.$store.state.gridOffset}} - {{this.pageCount}}</span> of {{this.$store.state.resultsnum}} </span>
 
                     <div class="pagination">
 

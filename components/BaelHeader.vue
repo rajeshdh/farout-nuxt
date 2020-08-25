@@ -9,7 +9,7 @@
       </div>  
 
       <div class="c-4 xs-border-t xs-border-b sm-border-t-none sm-border-b-none sm-border-l sm-border-r xs-p2">
-        <div class="item xs-flex">
+        <div class="bg-grey-lightes mx-64 focus:border-orange rounded-lg shadow-inner w-64 mb-4  md:mb-0 md:w-1/3">
           <VueFuse  placeholder="Search" :compResults="compResults" :keys="keys" :list="allPosts" event-name="searchChanged" />
         </div>
 

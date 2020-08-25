@@ -1,8 +1,8 @@
 <template>
-<div class="flex mb-4 mx-2 xs-text-6 md-text-5 ">
+<div class="flex mb-4 mx-8 xs-text-6 md-text-5 ">
     <div v-if="items2[0]" class="flex flex-wrap -mb-3" :style="`height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`">
 
-      <div v-if="items2[pi]" v-for="(p,pi) in items2" :key="p.pi" class="bg-white rounded text-blue-600 flex items-center w-1/3 hover:text-red-500  p-3 shadow-sm border border-gray-200">
+      <div v-if="items2[pi]" v-for="(p,pi) in items2" :key="p.pi" class="bg-white rounded-md text-blue-600 flex items-center w-1/3 hover:text-red-500  p-3 shadow-sm rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden ">
         <div class="item xs-block xs-full-height xs-flex">
           <nuxt-link class="xs-text-center xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center" :to="p._path">
             {{p.title}}

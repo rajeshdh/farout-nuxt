@@ -1356,11 +1356,18 @@
     "@nuxtjs/workbox" "^2.6.0"
 
 "@nuxtjs/tailwindcss@^3.0.0":
+<<<<<<< HEAD
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-3.0.1.tgz#8535fddb8bfb5fd27a17c4f2c54a48abb1a5422e"
+  integrity sha512-WqxRLCFotW72fv6RKcw9e15ZeVpizuidaGk8zUDfXewbtGjtu+UyB6F1QsgtxskzW7bkYyqPP5KsdpKfi5Pn/w==
+  dependencies:
+=======
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-3.0.2.tgz#2763d5f9f8a002130437cec1653f0c15335d8d9b"
   integrity sha512-jSudt1JaJQRE64r0Bx5PHVTYVIedlZtR00KtFYYUSpRLHD2BLkjHsvYOa/jtKcinSF3RWZy6dg+l0IMJqDoSLg==
   dependencies:
     clear-module "^4.1.1"
+>>>>>>> 66ce5a90732e330bf8404ec987a4419db6af9de8
     consola "^2.15.0"
     defu "^3.1.0"
     fs-extra "^9.0.1"

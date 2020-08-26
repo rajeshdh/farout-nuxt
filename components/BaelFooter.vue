@@ -71,7 +71,7 @@
         </div>
       </div>
 
-      <div class="px-4 py-2 border-b border-gray-200 sm:flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class=" contents px-4 py-2 border-b border-gray-200  justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
         <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
           <div class="item">
             <div v-show="siteDescription" class="footer__heading xs-mb2">About</div>
@@ -105,7 +105,7 @@
             </ul>
           </div>
         </div>
-        <div class="px-4 py-2 border-b border-gray-200 " :class="signupAboutSize">
+        <div class="px-4 py-2 border-b border-gray-200 sm:flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline" :class="signupAboutSize">
           <div class="item">
             <div class="footer__heading xs-mb2">Deploy</div>
 

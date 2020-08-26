@@ -71,7 +71,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-4 gap-4">
+      <div class="my-6 bg-gray-800 text-white h-64">
         <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
           <div class="item">
             <div v-show="siteDescription" class="footer__heading xs-mb2">About</div>
@@ -95,7 +95,7 @@
             <div class="xs-mb2">{{emaildata.email}} has been added to our newsletter.</div>
           </div>
         </div>
-        <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
+        <div class="my-6 bg-gray-800 text-white h-42" :class="signupAboutSize">
           <div class="item">
             <div v-show="connectData" class="footer__heading xs-mb2">Connect</div>
             <ul class="list-unstyled">
@@ -105,7 +105,7 @@
             </ul>
           </div>
         </div>
-        <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
+        <div class="my-6 bg-gray-800 text-white h-42" :class="signupAboutSize">
           <div class="item">
             <div class="footer__heading xs-mb2">Deploy</div>
 

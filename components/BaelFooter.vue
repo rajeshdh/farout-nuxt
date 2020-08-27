@@ -1,4 +1,5 @@
 <template>
+
   <footer class="fill-gray-lighter xs-text-6 md-text-5">
     <div class="r no-gap">
       <div
@@ -70,16 +71,28 @@
           </div>
         </div>
       </div>
+      <div id="footer" class="bg-gray-500">
 
-      <div class=" h-16  w-full bottom-0 flex items-center ">
-        <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
-          <div class="bg-gray-500 rounded-lg p-5 block bg-white text-white max-w-full h-auto flex items-center w-1/4 hover:text-blue-300  p-3 shadow-sm rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden rounded overflow-hidden shadow-lg m-2">
+    <!-- start container -->
+    <div class="container mx-auto pt-24 pb-4">
+
+        <div class="flex flex-wrap overflow-hidden sm:-mx-1 md:-mx-px lg:-mx-2 xl:-mx-2">
+
+            <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
+                <!-- Column 1 Content -->
+            <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
+       
             <div v-show="siteDescription" class="footer__heading xs-mb2 text-black">About</div>
             <p v-show="siteDescription">{{siteDescription}}</p>
           </div>
         </div>
-        <div v-if="signupBoolean" class="c-25 xs-text-left xs-p2 xs-border">
-          <div v-if="!sent" class="bg-gray-500 rounded-lg p-5 block bg-white rounded-md text-white max-w-full h-auto flex items-center w-1/4 hover:text-blue-300  p-3 shadow-sm rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden rounded overflow-hidden shadow-lg m-2">
+            
+            
+
+            <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
+                <!-- Column 2 Content -->
+<div v-if="signupBoolean" class="c-25 xs-text-left xs-p2 xs-border">
+          <div v-if="!sent" class="">
             <div class="footer__heading xs-mb2">Newsletter Signup</div>
             <form @submit.prevent="processForm" action="/.netlify/functions/app" name="mailinglist">
               <input
@@ -95,17 +108,27 @@
             <div class="xs-mb2">{{emaildata.email}} has been added to our newsletter.</div>
           </div>
         </div>
-        <div class="bg-gray-500 rounded-lg p-5 block bg-white rounded-md text-white  max-w-full h-auto flex items-center w-1/4 hover:text-blue-300  p-3 shadow-sm rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden rounded overflow-hidden shadow-lg m-2" :class="signupAboutSize">
+
+                
+
+            
+                <!-- Column 3 Content -->
+                <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
+                <div class="" :class="signupAboutSize">
           <div class="item">
-            <div v-show="connectData" class="footer__heading xs-mb2 text-black ">Connect</div>
+            <div v-show="connectData" class="footer__heading xs-mb2 text-black">Connect</div>
             <ul class="list-unstyled">
               <li v-show="connectData" v-for="(c,i) in connectData" :key="i">
-                <a :href="c.url">{{c.name}}</a>
+                <a :href="c.url">{{c.name}}</a> 
               </li>
             </ul>
           </div>
         </div>
-        <div class="bg-gray-500 rounded-lg p-5 block bg-white rounded-md text-white max-w-full h-auto flex items-center w-1/4 hover:text-blue-300  p-3 shadow-sm rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden rounded overflow-hidden shadow-lg m-2" :class="signupAboutSize">
+                </div>
+
+       
+                <!-- Column 4 Content -->
+                   <div class="" :class="signupAboutSize">
           <div class="item">
             <div class="footer__heading xs-mb2">Deploy</div>
 
@@ -120,16 +143,29 @@
             </a>
           </div>
         </div>
-      </div>
+       </div>
+        </div>
+        
 
-      <div class="fixed h-16 bg-red-500 w-full bottom-0 flex items-center justify-center">
-        <div class="item xs-text-6">
+        <!-- Start footer bottom -->
+
+        <div class="pt-4 md:flex md:items-center md:justify-center " style="border-top:1px solid white">
+           <div class="item xs-text-6">
           <a href="https://github.com/jake-101/bael-template">Bael</a>, An open source design by
           <a href="https://jake101.com">jake101</a>
         </div>
+            </div>
+
+
+        <!-- end container -->
+        </div>
+
+
       </div>
-    </div>
+  </div>
   </footer>
+
+
 </template>
 
 <script>

@@ -18,7 +18,7 @@
             class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150"
           >Next</nuxt-link>
         </div>
-        <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+        <div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
           <div>
             <p class="text-sm leading-5 text-gray-700">
               Showing
@@ -71,15 +71,15 @@
         </div>
       </div>
 
-      <div class=" contents px-4 py-2 border-b border-gray-200  justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class=" h-16  w-full bottom-0 flex items-center ">
         <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
-          <div class="item">
-            <div v-show="siteDescription" class="footer__heading xs-mb2">About</div>
+          <div class="bg-gray-500 rounded-lg p-5 block bg-white text-white max-w-full h-auto flex items-center w-1/4 hover:text-blue-300  p-3 shadow-sm rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden rounded overflow-hidden shadow-lg m-2">
+            <div v-show="siteDescription" class="footer__heading xs-mb2 text-black">About</div>
             <p v-show="siteDescription">{{siteDescription}}</p>
           </div>
         </div>
         <div v-if="signupBoolean" class="c-25 xs-text-left xs-p2 xs-border">
-          <div v-if="!sent" class="item">
+          <div v-if="!sent" class="bg-gray-500 rounded-lg p-5 block bg-white rounded-md text-white max-w-full h-auto flex items-center w-1/4 hover:text-blue-300  p-3 shadow-sm rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden rounded overflow-hidden shadow-lg m-2">
             <div class="footer__heading xs-mb2">Newsletter Signup</div>
             <form @submit.prevent="processForm" action="/.netlify/functions/app" name="mailinglist">
               <input
@@ -88,16 +88,16 @@
                 class="text-input text-input--small xs-mb1 xs-mr2"
                 placeholder="you@email.com"
               />
-              <button type="submit" class="button button--transparent button--small">Submit</button>
+              <button type="submit" class="button button--transparent button--small text-blue">Submit</button>
             </form>
           </div>
           <div class="item" v-else>
             <div class="xs-mb2">{{emaildata.email}} has been added to our newsletter.</div>
           </div>
         </div>
-        <div class="px-4 py-2 border-b border-gray-200 sm:flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline" :class="signupAboutSize">
+        <div class="bg-gray-500 rounded-lg p-5 block bg-white rounded-md text-white  max-w-full h-auto flex items-center w-1/4 hover:text-blue-300  p-3 shadow-sm rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden rounded overflow-hidden shadow-lg m-2" :class="signupAboutSize">
           <div class="item">
-            <div v-show="connectData" class="footer__heading xs-mb2">Connect</div>
+            <div v-show="connectData" class="footer__heading xs-mb2 text-black ">Connect</div>
             <ul class="list-unstyled">
               <li v-show="connectData" v-for="(c,i) in connectData" :key="i">
                 <a :href="c.url">{{c.name}}</a>
@@ -105,11 +105,11 @@
             </ul>
           </div>
         </div>
-        <div class="px-4 py-2 border-b border-gray-200 sm:flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline" :class="signupAboutSize">
+        <div class="bg-gray-500 rounded-lg p-5 block bg-white rounded-md text-white max-w-full h-auto flex items-center w-1/4 hover:text-blue-300  p-3 shadow-sm rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden rounded overflow-hidden shadow-lg m-2" :class="signupAboutSize">
           <div class="item">
             <div class="footer__heading xs-mb2">Deploy</div>
 
-            <a
+            <a  
               href="https://app.netlify.com/start/deploy?repository=https://github.com/jake-101/bael-template"
             >
               <img
@@ -122,7 +122,7 @@
         </div>
       </div>
 
-      <div class="c-12 xs-text-left xs-p2 xs-border">
+      <div class="fixed h-16 bg-red-500 w-full bottom-0 flex items-center justify-center">
         <div class="item xs-text-6">
           <a href="https://github.com/jake-101/bael-template">Bael</a>, An open source design by
           <a href="https://jake101.com">jake101</a>

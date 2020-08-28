@@ -101,7 +101,7 @@
                 class="text-input text-input--small xs-mb1 xs-mr2"
                 placeholder="you@email.com"
               />
-              <button type="submit" class="button button--transparent button--small text-blue">Submit</button>
+              <button type="submit" class="button button--transparent button--small text-blue bg-blue-800 rounded-lg py-2 px-5 shadow-lg text-green-100 text-sm hover:bg-blue-900">Submit</button>
             </form>
           </div>
           <div class="item" v-else>

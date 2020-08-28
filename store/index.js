@@ -8,6 +8,7 @@ const createStore = () =>
       menuIsActive: false,
       menuInitial: true,
       blogPosts: [],
+      rentalItems: [],
       allPages: [],
       navheight: 60,
       blogTitle: '',
@@ -17,11 +18,13 @@ const createStore = () =>
       gridItems: [],
       gridNumPosts: '11',
       gridNumCats: '11',
+      gridNumRentals: '11',
       gridOffset: '0',
       theThumbnail: '',
       theCategory: '',
       theCrumb: '',
       allCats: [],
+      allRentals: [],
       results: [],
       resultsnum: [],
       pagination: false
@@ -30,8 +33,10 @@ const createStore = () =>
       async nuxtServerInit({ dispatch }) {
         await dispatch('getSiteInfo')
         await dispatch('getBlogPosts')
+        await dispatch('getRentalItems')
         await dispatch('getPages')
         await dispatch('getCats')
+        await dispatch('getRentals')
       },
       async getBlogPosts({ state, commit }) {
         const context = await require.context('~/content/blog/posts/', false, /\.json$/);
@@ -40,8 +45,6 @@ const createStore = () =>
           ...context(key),
           _path: `/blog/${key.replace('.json', '').replace('./', '')}`
         }));
-
-
 
         commit('SET_POSTS', searchposts.reverse())
 
@@ -69,6 +72,11 @@ const createStore = () =>
           this.$store.commit("SET_GRIDNUMCATS", 12);
         }
       },
+      setGridNumRentals({ state, commit }) {
+        if(state.rentalItems > 12){
+          this.$store.commit("SET_GRIDNUMRENTALS", 12);
+        }
+      },
 
       async getCats({ state, commit }) {
 
@@ -83,6 +91,32 @@ const createStore = () =>
         commit('SET_CATS', pages)
 
       },
+
+      async getRentals({ state, commit }) {
+
+
+        const context = await require.context('~/content/rentals/posts/', false, /\.json$/);
+
+        const pages = await context.keys().map(key => ({
+          ...context(key),
+          _path: `/rental/${key.replace('.json', '').replace('./', '')}`
+        }));
+
+        commit('SET_RENTALS', pages)
+
+      },
+      async getRentalItems({ state, commit }) {
+        const context = await require.context('~/content/rentals/posts/', false, /\.json$/);
+
+        const searchposts = await context.keys().map(key => ({
+          ...context(key),
+          _path: `/rental/${key.replace('.json', '').replace('./', '')}`
+        }));
+
+        commit('SET_RENTAL_ITEMS', searchposts.reverse())
+
+      },
+
       async getTags({ state, commit }) {
 
 
@@ -118,11 +152,17 @@ const createStore = () =>
       SET_POSTS(state, data) {
         state.blogPosts = data
       },
+      SET_RENTAL_ITEMS(state, data) {
+        state.rentalItems = data
+      },
       SET_PAGES(state, data) {
         state.allPages = data
       },
       SET_CATS(state, data) {
         state.allCats = data
+      },
+      SET_RENTALS(state, data){
+        state.allRentals = data
       },
       SET_CRUMB(state, data) {
         state.theCrumb = data
@@ -135,6 +175,9 @@ const createStore = () =>
       },
       SET_GRIDNUMCATS(state, data) {
         state.gridNumCats = data
+      },
+      SET_GRIDNUMRENTALS(state, data){
+        state.gridNumRentals = data
       },
       SET_GRIDOFFSET(state, data) {
         state.gridOffset = data

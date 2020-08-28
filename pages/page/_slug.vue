@@ -3,7 +3,7 @@
     <div class="full-height single xs-border-left xs-border-right" :style="`min-height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`">
       <div class="xs-mt2 xs-p2 bcg-item">
         <div class="item xs-block xs-full-height">
-          <div v-if="thumbnail" class="fill-gray-lighter feat-wrapper"><transition appear name="fade"><img class="featured-image" :src="thumbnail" :alt="title"></transition></div>
+          <div v-if="thumbnail" class="fill-gray-lighter feat-wrapper"><transition appear name="fade"><img class="featured-image object-fit h-64 w-full border-double border-4 border-gray-600min-h-screen bg-right-bottom bg-cover flex" :src="thumbnail" :alt="title"></transition></div>
           <h1 class="xs-py3 main-title">{{title}}</h1>
           <div class="xs-py3 post-content text-gray">
             <div v-html="$md.render(body)"></div>
@@ -14,6 +14,8 @@
     </div>
   </main>
 </template>
+
+
 
 
 

@@ -1,4 +1,5 @@
 <template>
+
   <footer class="fill-gray-lighter xs-text-6 md-text-5">
     <div class="r no-gap">
       <div
@@ -18,7 +19,7 @@
             class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150"
           >Next</nuxt-link>
         </div>
-        <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+        <div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
           <div>
             <p class="text-sm leading-5 text-gray-700">
               Showing
@@ -70,16 +71,28 @@
           </div>
         </div>
       </div>
+      <div id="footer" class="bg-gray-500">
 
-      <div class="grid grid-cols-4 gap-4">
-        <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
-          <div class="item">
-            <div v-show="siteDescription" class="footer__heading xs-mb2">About</div>
+    <!-- start container -->
+    <div class="container mx-auto pt-24 pb-4">
+
+        <div class="flex flex-wrap overflow-hidden sm:-mx-1 md:-mx-px lg:-mx-2 xl:-mx-2">
+
+            <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
+                <!-- Column 1 Content -->
+            <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
+       
+            <div v-show="siteDescription" class="footer__heading xs-mb2 text-black">About</div>
             <p v-show="siteDescription">{{siteDescription}}</p>
           </div>
         </div>
-        <div v-if="signupBoolean" class="c-25 xs-text-left xs-p2 xs-border">
-          <div v-if="!sent" class="item">
+            
+            
+
+            <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
+                <!-- Column 2 Content -->
+<div v-if="signupBoolean" class="c-25 xs-text-left xs-p2 xs-border">
+          <div v-if="!sent" class="">
             <div class="footer__heading xs-mb2">Newsletter Signup</div>
             <form @submit.prevent="processForm" action="/.netlify/functions/app" name="mailinglist">
               <input
@@ -88,28 +101,38 @@
                 class="text-input text-input--small xs-mb1 xs-mr2"
                 placeholder="you@email.com"
               />
-              <button type="submit" class="button button--transparent button--small">Submit</button>
+              <button type="submit" class="button button--transparent button--small text-blue bg-blue-800 rounded-lg py-2 px-5 shadow-lg text-green-100 text-sm hover:bg-blue-900">Submit</button>
             </form>
           </div>
           <div class="item" v-else>
             <div class="xs-mb2">{{emaildata.email}} has been added to our newsletter.</div>
           </div>
         </div>
-        <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
+
+                
+
+            
+                <!-- Column 3 Content -->
+                <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
+                <div class="" :class="signupAboutSize">
           <div class="item">
-            <div v-show="connectData" class="footer__heading xs-mb2">Connect</div>
+            <div v-show="connectData" class="footer__heading xs-mb2 text-black">Connect</div>
             <ul class="list-unstyled">
               <li v-show="connectData" v-for="(c,i) in connectData" :key="i">
-                <a :href="c.url">{{c.name}}</a>
+                <a :href="c.url">{{c.name}}</a> 
               </li>
             </ul>
           </div>
         </div>
-        <div class="xs-text-left xs-p2 xs-border" :class="signupAboutSize">
+                </div>
+
+       
+                <!-- Column 4 Content -->
+                   <div class="" :class="signupAboutSize">
           <div class="item">
             <div class="footer__heading xs-mb2">Deploy</div>
 
-            <a
+            <a  
               href="https://app.netlify.com/start/deploy?repository=https://github.com/jake-101/bael-template"
             >
               <img
@@ -120,16 +143,29 @@
             </a>
           </div>
         </div>
-      </div>
+       </div>
+        </div>
+        
 
-      <div class="c-12 xs-text-left xs-p2 xs-border">
-        <div class="item xs-text-6">
+        <!-- Start footer bottom -->
+
+        <div class="pt-4 md:flex md:items-center md:justify-center " style="border-top:1px solid white">
+           <div class="item xs-text-6">
           <a href="https://github.com/jake-101/bael-template">Bael</a>, An open source design by
           <a href="https://jake101.com">jake101</a>
         </div>
+            </div>
+
+
+        <!-- end container -->
+        </div>
+
+
       </div>
-    </div>
+  </div>
   </footer>
+
+
 </template>
 
 <script>

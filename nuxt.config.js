@@ -36,7 +36,7 @@ env: {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Archivo+Black' }
     ]
   },
-  //  css: ["@/assets/grid.css","bf-solid/dist/solid.latest.css"],
+  //css: ["@/assets/grid.css","bf-solid/dist/solid.latest.css"],
   // icon: {
   //   iconSrc: `${siteInfo.siteicon}`
   //  },

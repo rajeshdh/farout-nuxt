@@ -1,5 +1,5 @@
 <template>
-  <nav ref="navBar" id="navbar" class="sm-border-b-0">
+  <nav ref="navBar" id="navbar" class="sm-border-b-0 z-50">
     <div class="flex justify-between flex-wrap bg-purple-500 p-6">
 
       <div class="c-4 xs-text-left xs-p2 sm-border-r">
@@ -10,7 +10,7 @@
 
       <div class="c-4 xs-border-t xs-border-b sm-border-t-none sm-border-b-none sm-border-l sm-border-r xs-p2">
         <div class="bg-grey-lightes mx-64 focus:border-orange rounded-lg shadow-inner w-64 mb-4  md:mb-0 md:w-1/3">
-          <VueFuse  placeholder="Search" :compResults="compResults" :keys="keys" :list="allPosts" event-name="searchChanged" />
+          <VueFuse class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none" placeholder="Search" :compResults="compResults" :keys="keys" :list="allPosts" event-name="searchChanged" />
         </div>
 
       </div>
@@ -84,12 +84,12 @@ export default {
 };
 </script>
 <style>
-#navbar {z-index:999;}
+
 .titlebar .item {
   overflow-x: none;
 }
-.results {
-  padding-left: 0;
+.results {    
+  padding-left: 0;  
   transform: translateY(17px);
   width: 30vw;
 }
@@ -115,5 +115,5 @@ nav {
   .results {
     width: 94vw;
   }
-}
+} 
 </style>

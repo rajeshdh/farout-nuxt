@@ -1,6 +1,6 @@
 <template>
   <div class="searchwrapper xs-relative">
-   <input class="search xs-flex-grow-1 text-input xs-border-none xs-fit xs-text-5 md-text-4 xs-m0 xs-p0"  type="search" v-model="value" :placeholder="placeholder">
+   <input class="search xs-flex-grow-1 text-input xs-border-none xs-fit xs-text-5 md-text-4 xs-m0 xs-p0 my-2"  type="search" v-model="value" :placeholder="placeholder">
     <!-- <img class="xs-absolute searchicon xs-r0 sm-l0" src="~/assets/bx-search.svg"> -->
     <ul class="xs-absolute results">
       <li class="xs-border xs-p2 fill-white" v-for="(xx,i) in compResults" :key="i">

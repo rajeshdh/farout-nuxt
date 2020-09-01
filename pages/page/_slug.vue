@@ -14,11 +14,6 @@
     </div>
   </main>
 </template>
-
-
-
-
-
 <script>
 import MdWrapper from "~/components/MdWrapper";
 

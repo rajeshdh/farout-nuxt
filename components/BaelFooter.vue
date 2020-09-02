@@ -71,7 +71,7 @@
           </div>
         </div>
       </div>
-      <div id="footer" class="w-full bg-blue-900">
+      <div id="footer" class="w-screen bg-blue-900">
         <div class="flex flex-wrap text-center text-white">
 <div class="container bg-grey-lighter p-8">
     <div class="sm:flex mb-4">

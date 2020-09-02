@@ -6,7 +6,23 @@
           <nuxt-link class="sitename" to="/" exact>{{headerSiteName}}</nuxt-link>
         </div>
       </div>
-
+      
+          <div
+        v-if="blogtitle"
+        style="z-index:55;"
+        class="c-12 xs-border-t xs-border-b xs-p2 xs-text-6 titlebar"
+      >
+        <div class="item">
+          <nuxt-link to="/" exact>Home</nuxt-link>
+          <span v-show="crumb">
+            &nbsp;
+            <span class="text-gray-lightest">></span>
+            &nbsp; {{thecrumb}}
+          </span> &nbsp;
+          <span class="text-gray-lightest">></span>
+          &nbsp; {{blogtitle}}
+        </div>
+      </div>
       <div class="relative mx-auto text-gray-600 lg:block hidden">
         <VueFuse
           class="border-2 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
@@ -36,22 +52,7 @@
           </svg>
         </button>
       </div>
-      <div
-        v-if="blogtitle"
-        style="z-index:55;"
-        class="c-12 xs-border-t xs-border-b xs-p2 xs-text-6 titlebar"
-      >
-        <div class="item">
-          <nuxt-link to="/" exact>Home</nuxt-link>
-          <span v-show="crumb">
-            &nbsp;
-            <span class="text-gray-lightest">></span>
-            &nbsp; {{thecrumb}}
-          </span> &nbsp;
-          <span class="text-gray-lightest">></span>
-          &nbsp; {{blogtitle}}
-        </div>
-      </div>
+     
     </div>
   </nav>
 </template>

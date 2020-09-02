@@ -21,7 +21,7 @@
         </div>
         <div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
           <div>
-            <p class="text-sm leading-5 text-gray-700">
+            <p class="text-sm leading-5 text-gray-700 my-6 ml-3 text-xl font-semibold">
               Showing
               <span class="font-medium">{{ 1 + this.$store.state.gridOffset}}</span>
               to
@@ -101,7 +101,7 @@
   <div class="sm:w-1/4 h-auto sm:mt-0 mt-8">
               <div class="" :class="signupAboutSize">
           <div class="item">
-            <div class="footer__heading my-6 ml-3 text-xl font-semibold ">Deploy</div>
+            <div class="footer__heading my-6 ml-3 text-xl font-semibold">Deploy</div>
 
             <a  
               href="https://app.netlify.com/start/deploy?repository=https://github.com/jake-101/bael-template"
@@ -131,7 +131,7 @@
             </form>
           </div>
           <div class="item" v-else>
-            <div class="xs-mb2">{{emaildata.email}} has been added to our newsletter.</div>
+            <div class="xs-mb2">{{emaildata.email}} has been added to our newsletter.</div> 
           </div>
         </div>
  </div>  

@@ -4,7 +4,7 @@
     <div class="full-height single xs-border-left xs-border-right" :style="`min-height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`">
       <div class="xs-mt2 xs-p2 bcg-item">
         <div class="item xs-block xs-full-height">
-          <div class="feat-wrapper" v-if="theThumb"><transition appear name="fade"><img class="featured-image object-cover h-64 w-64 border-double border-4 border-gray-600 bg-right-bottom bg-cover flex" :src="thumbnail" :alt="title"></transition></div>
+          <div class="feat-wrapper" v-if="theThumb"><transition appear name="fade"><img class="w-full sm:w-2/5 md:w-3/6 xl:w-2/5 flex mx-auto p-4 pt-8 border-double border-4 border-gray-600" :src="thumbnail" :alt="title"></transition></div>
           <h1 class="xs-py3 main-title my-24">{{title}}</h1>
           <no-ssr>
             <div class="xs-mt-5 bold">

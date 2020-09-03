@@ -6,8 +6,8 @@
           <nuxt-link class="sitename" to="/" exact>{{headerSiteName}}</nuxt-link>
         </div>
       </div>
-      
-          <div
+
+      <div
         v-if="blogtitle"
         style="z-index:55;"
         class="c-12 xs-border-t xs-border-b xs-p2 xs-text-6 titlebar"
@@ -52,7 +52,6 @@
           </svg>
         </button>
       </div>
-     
     </div>
   </nav>
 </template>

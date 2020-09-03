@@ -14,7 +14,7 @@
     </div>
   </main>
 </template>
-<script>
+<script>  
 import MdWrapper from "~/components/MdWrapper";
 
 export default {

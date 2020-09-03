@@ -5,7 +5,7 @@
       <div class="xs-mt2 xs-p2 bcg-item">
         <div class="item xs-block xs-full-height">
           <div class="feat-wrapper" v-if="theThumb"><transition appear name="fade"><img class="w-full sm:w-2/3 md:w-3/5 xl:w-2/5 flex mx-auto p-4 pt-8 border-double border-4 border-gray-600" :src="thumbnail" :alt="title"></transition></div>
-          <h1 class="xs-py3 main-title my-24">{{title}}</h1>
+          <h1 class="xs-py3 main-title my-24 xl:italic">{{title}}</h1>
           <no-ssr>
             <div class="xs-mt-5 bold">
             <ul class="list-unstyled xs-flex xs-flex-align-center">

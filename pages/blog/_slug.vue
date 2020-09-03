@@ -1,10 +1,10 @@
 <template>  
   <main>
-    <div class="flex flex-col mx-4 items-center bg-white-200 px-4 py-40 rounded-tb rounded-lr border-solid border-4 border-gray-400 w-screen">
+    <div class="flex flex-col mx-4 items-center bg-white-200 px-2 rounded-tb rounded-lr border-solid border-4 border-gray-400 w-screen">
     <div class="full-height single xs-border-left xs-border-right" :style="`min-height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`">
       <div class="xs-mt2 xs-p2 bcg-item">
         <div class="item xs-block xs-full-height">
-          <div class="feat-wrapper" v-if="theThumb"><transition appear name="fade"><img class="featured-image object-cover h-64 w-full border-double border-4 border-gray-600min-h-screen bg-right-bottom bg-cover flex" :src="thumbnail" :alt="title"></transition></div>
+          <div class="feat-wrapper" v-if="theThumb"><transition appear name="fade"><img class="featured-image object-cover h-64 w-full border-double border-4 border-gray-600 bg-right-bottom bg-cover flex" :src="thumbnail" :alt="title"></transition></div>
           <h1 class="xs-py3 main-title my-24">{{title}}</h1>
           <no-ssr>
             <div class="xs-mt-5 bold">
@@ -24,6 +24,7 @@
 
     </div>
     </div>
+    
   </main>
 </template>
 

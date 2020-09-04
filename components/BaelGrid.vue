@@ -1,6 +1,6 @@
 <template>
 <div class="container my-12 mx-auto px-4 md:px-12">
-    <div v-if="items2[0]" class="flex flex-wrap -mb-3 mx-16 w-screen" :style="`height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`">
+    <div v-if="items2[0]" class="flex flex-wrap -mb-3 mx-56 w-full" :style="`height:calc(100vh - ${navbarheight}px);margin-top:${navbarheight}px`">
 
       <div v-if="items2[pi]" v-for="(p,pi) in items2" :key="p.pi" class="bg-gray-200 rounded-lg p-5 block bg-white rounded-md text-blue-600 max-w-full h-auto flex items-center w-1/5 hover:text-blue-300  p-3 shadow-sm rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden rounded overflow-hidden shadow-lg m-2 transform hover:-translate-y-1 hover:shadow-lg">
         <div class="item xs-block xs-full-height xs-flex">

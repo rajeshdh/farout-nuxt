@@ -9,7 +9,7 @@
            {{p.title}}
           </nuxt-link>
           </div>
-          <nuxt-link  :to="p._path">
+          <nuxt-link  :to="p._path">  
           <img  v-lazy="p.thumbnail" :key="p.thumbnail" class="full-bg-image">
           
           <div v-if="!p.thumbnail" class="full-bg-color"></div>

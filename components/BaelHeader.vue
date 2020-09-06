@@ -23,7 +23,9 @@
           &nbsp; {{blogtitle}}
         </div>
       </div>
-      <div class="relative mx-auto text-gray-600 lg:block hidden">
+      
+      
+       <div class="relative mx-auto text-gray-600 lg:block hidden">
         <VueFuse
           class="border-2 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
           placeholder="Search..."
@@ -31,7 +33,9 @@
           :keys="keys"
           :list="allPosts"
           event-name="searchChanged"
-        />
+        /> 
+        
+    
         <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
           <svg
             class="text-gray-600 h-4 w-4 fill-current"
@@ -53,7 +57,7 @@
         </button>
         
       </div>
-    </div>
+     </div> 
   </nav>
 </template>
 <script>
@@ -143,4 +147,4 @@ nav {
     width: 94vw;
   }
 }
-</style>
+</style>  
